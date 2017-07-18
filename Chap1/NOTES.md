@@ -15,6 +15,11 @@ Implement an algorithm to determine if a string has all unique characters. What 
 
 ### Design an Algorithm
 
+ 1. Use char flags: set up a Boolean array of 256 elements, each representing an unique character.
+ 2. Use bit maps: similar to char flags, but more compact since we only use 256 bits (equivalent to 8 32-bit integers). Need to use some bit manipulation.
+ 3. Use hash maps: for each character, check if it already exists in the key set.
+ 4. Sort the string.
+
 ### Write Pseudocodes
 
 ### Write Real Codes
