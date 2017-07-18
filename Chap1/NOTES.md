@@ -3,15 +3,15 @@
 ---
 ## Question 1.1
 
-Implement an algorithm to determine if a string has all unique characters. What if you can not use additional data structures?
+**Implement an algorithm to determine if a string has all unique characters. What if you can not use additional data structures?**
 
 ### Ask Questions
 
- * Is the string encoded in ASCII?
- * Is this a C-style string (ending with ```\0```, and can be operated upon with ```<string>```)?
- * May I make a copy of the input string?
- * If I have to do it in place, may I change the contents of the buffer?
- * How should the function results defined if the string is an empty string?
+ 1. Is the string encoded in ASCII?
+ 2. Is this a C-style string (ending with ```\0```, and can be operated upon with ```<string>```)?
+ 3. May I make a copy of the input string?
+ 4. If I have to do it in place, may I change the contents of the buffer?
+ 5. How should the function results defined if the string is an empty string?
 
 ### Design an Algorithm
 
@@ -37,6 +37,21 @@ Implement an algorithm to determine if a string has all unique characters. What 
 
 ## Question 1.2
 
+**Write code to reverse a C-Style String. (C-String means that “abcd” is represented as five characters, including the null character.)**
+
+### Ask Questions
+
+ 1. What if the string does not have a proper ending of ```\0```?
+
+### Design an Algorithm
+
+### Write Pseudocodes
+
+### Write Real Codes
+
+### Test and Fix Bugs
+
+#### Test Cases
 
 ---
 
