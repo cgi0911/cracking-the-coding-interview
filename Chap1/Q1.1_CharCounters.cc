@@ -40,4 +40,6 @@ int main (int argc, char *argv[])
     bool isAllUniqueChars = CheckAllUniqueChars (myStr);
 
     cout << "Is the input string using all-unique chars? " << isAllUniqueChars << endl;
+
+    return 0;
 }

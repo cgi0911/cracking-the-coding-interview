@@ -21,6 +21,13 @@ Implement an algorithm to determine if a string has all unique characters. What 
 
 ### Test and Fix Bugs
 
+ #### Test Cases
+ 1. Empty string
+ 2. String with only one char
+ 3. All-unique char string
+ 4. All-duplicates string
+ 5. String with some unique chars and some duplicates
+
 ---
 
 ## Question 1.2
