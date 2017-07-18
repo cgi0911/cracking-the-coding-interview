@@ -33,3 +33,4 @@
 
 # Linux Temporary Files
 *.swp
+*.*~
