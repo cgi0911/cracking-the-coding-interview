@@ -7,7 +7,7 @@ Implement an algorithm to determine if a string has all unique characters. What 
 
 ### Ask Questions
 
-.* Is the string encoded in ASCII?
+ * Is the string encoded in ASCII?
 
 ### Design an Algorithm
 
