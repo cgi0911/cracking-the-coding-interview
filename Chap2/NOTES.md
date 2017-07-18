@@ -10,9 +10,14 @@
 
 ### Ask Questions
 
+ 1. Is this a singly or doubly linked list?
+ 2. What is the data type stored in the nodes?
 
 ### Design an Algorithm
 
+ Assume the linked list contains at least 2 nodes (make sure to check the corner cases!).
+ For each node iterated, we check from front for duplication. If duplication found, we
+ delete the node under inspection.
 
 ### Write Pseudocodes
 
