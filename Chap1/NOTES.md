@@ -92,9 +92,29 @@
 
 ## Question 1.4
 
+### Ask Questions
+
+### Design an Algorithm
+
+### Write Pseudocodes
+
+### Write Real Codes
+
+### Test and Fix Bugs
+
 ---
 
 ## Question 1.5
+
+### Ask Questions
+
+ 1. Should I do it in place?
+ 2. Is this a C-style string? How much buffer in total is given?
+ 
+### Design an Algorithm
+
+ 1. Do a first scan through the C-style string, and calculate the new string length.
+ 2. Iterate the string backwards. When ever a whitespace is observed, write ```"%20"```.
 
 ---
 
