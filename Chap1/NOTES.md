@@ -45,6 +45,8 @@
 
 ### Design an Algorithm
 
+ The algorithm is relatively simple. Simply swap the characters ```myStr[i]``` with ```myStr[strlen (myStr) - i - 1]```, where ```i = 0 .. floor (strlen (myStr) / 2)```.
+
 ### Write Pseudocodes
 
 ### Write Real Codes
