@@ -45,7 +45,8 @@
 
 ### Design an Algorithm
 
- The algorithm is relatively simple. Simply swap the characters ```myStr[i]``` with ```myStr[strlen (myStr) - i - 1]```, where ```i = 0 .. floor (strlen (myStr) / 2)```.
+ The algorithm is relatively simple. Simply swap the characters ```myStr[i]``` with  
+ ```myStr[strlen (myStr) - i - 1]```, where ```i = 0 .. floor (strlen (myStr) / 2)```.
 
 ### Write Pseudocodes
 
@@ -58,6 +59,34 @@
 ---
 
 ## Question 1.3
+
+**Design an algorithm and write code to remove the duplicate characters in a string without using any additional buffer. NOTE: One or two additional variables are fine. An extra copy of the array is not.**
+
+**FOLLOW UP**
+**Write the test cases for this method.**
+
+### Ask Questions
+
+ 1. Is this a C-style string (char array ending with ```\0```) or a C++ string?
+ 2. How should the result be defined given an empty string?
+ 3. May I use extra data structures, e.g. char map, bitmap or hash table?
+
+### Design an Algorithm
+
+ If ```strlen (myStr) <= 1```, no operation is needed.
+ 
+ 1. Set up a pointer, ```runner```, that iterates through myStr one char at a time, starting from myStr[1].
+    Set up another pointer, ```tail```, that marks the ending position (where we'd like to write a ```\0```) of the resulting string.
+    For each character ```runner``` iterates, check against a char map too see if it's a duplication.
+    If yes, skip it and inspect the next character. If no, write it to the current ```tail``` position and increment ```tail```.
+
+### Write Pseudocodes
+
+### Write Real Codes
+
+### Test and Fix Bugs
+
+#### Test Cases
 
 ---
 
