@@ -1,5 +1,5 @@
-# Cracking The Coding Interview - Chapter 1 - Arrays and Strings
-
+# Cracking The Coding Interview
+# Chapter 1 - Arrays and Strings
 ---
 ## Question 1.1
 
