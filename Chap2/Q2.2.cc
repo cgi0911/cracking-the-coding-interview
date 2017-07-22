@@ -2,33 +2,30 @@
 #include <cstdlib>
 #include "list_node.h"
 
-ListNode* FindNthFromLast (ListNode *head, int n)
+ListNode* FindKthFromLast (ListNode *head, int k)
 {
-    if (head == NULL || n < 1)
+    if (head == NULL || k < 1)
     {
-        return NULL;    // Cannot operate
+        return NULL;    // Operation not defined
     }
 
     ListNode *ptr1 = head;
     ListNode *ptr2 = head;
 
-    // Move ptr2 n-1 steps forward
-    for (int i = 0 ; i < n - 1 ; i++)
-    {
-        if (ptr2 == NULL)
-        {
-            return NULL; // Less than n elements long
+    // First, move ptr2 forward by k-1 steps
+    for (int i = 0 ; i < k - 1 ; i++) {
+        if (ptr2 == NULL) {
+            return NULL;    // List not long enough
         }
         ptr2 = ptr2->next;
     }
-
-    // Now move together
-    while (ptr2->next != NULL)
-    {
+    
+    // ptr1 and ptr2 move together
+    while (ptr2->next != NULL) {
         ptr1 = ptr1->next;
         ptr2 = ptr2->next;
     }
-
+    
     return ptr1;
 }
 
@@ -36,20 +33,34 @@ ListNode* FindNthFromLast (ListNode *head, int n)
 int main (int argc, char *argv[])
 {
     srand (time(NULL));
-
-    ListNode *head = NewNode (rand () % 100);
-    ListNode *tail = head;
-
-    for (int i = 0 ; i < 8 - 1 ; i++)
-    {
-        tail = Append (tail, rand () % 100);
+    
+    int n, r, k;
+    
+    cout << "Number of elements in list: ";
+    cin >> n;
+    
+    if (n <= 0) {
+        cout << "Invalid list length!" << endl;
+        return 1;
     }
-
-    // Print the list
+    
+    cout << "Find kth from last: ";
+    cin >> k;
+    
+    r = 100;
+    
+    ListNode *head = MakeRandomList (n, r);
+    
+    cout << "The original list: ";
     PrintList (head);
 
     // Start looking for n-th from last
-    ListNode *nthFromLast = FindNthFromLast (head, 10);
+    ListNode *kthFromLast = FindKthFromLast (head, k);
 
-    cout << "10th from last = " << nthFromLast->data << endl;
+    if (kthFromLast) {
+        cout << k << "th from last = " << kthFromLast->data << endl;
+    }    
+    else {
+        cout << "No valid result!" << endl;
+    }
 }

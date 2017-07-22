@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstddef>  // For identifier NULL
+#include <cstdlib>
 
 using namespace std;
 
@@ -31,7 +32,7 @@ NewNode (int inData)
 }
 
 ListNode*
-Append (ListNode *curr_node, int inData)
+AppendToNode (ListNode *curr_node, int inData)
 {
     ListNode *nnode = NewNode (inData);
     curr_node->next = nnode;
@@ -42,6 +43,12 @@ void
 PrintList (ListNode *head)
 {
     ListNode *curr = head;
+    
+    if (curr == NULL) {
+        cout << "Empty list!" << endl;
+        return;
+    }
+    
     while (curr != NULL)
     {
         cout << curr->data << " " ;
@@ -49,6 +56,29 @@ PrintList (ListNode *head)
     }
 
     cout << endl;
+    
+    return;
+}
+
+ListNode*
+MakeRandomList (int n, int r) {
+    // n: # of elements
+    // r: range of each element [1..r]
+    if (n <= 0) {
+        return NULL;    // Empty list
+    }
+    
+    srand (time (NULL));
+    
+    ListNode *head = NewNode (rand () % r + 1);
+    ListNode *tail = head;
+    
+    for (int i = 0 ; i < n - 1 ; i++) {
+        AppendToNode (tail, rand () % r + 1);
+        tail = tail->next;
+    }
+    
+    return head;
 }
 
 #endif //LIST_NODE_H
